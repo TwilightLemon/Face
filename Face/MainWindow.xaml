@@ -1,0 +1,14 @@
+﻿<Window x:Class="Face.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="人脸识别"
+        xmlns:WPFMediaKit="clr-namespace:WPFMediaKit.DirectShow.Controls;assembly=WPFMediaKit"
+        Height="200" Width="200" Loaded="Window_Loaded" ResizeMode="NoResize" WindowStyle="ToolWindow">
+    <Grid>
+        <Button x:Name="btnCapture" Content="录入" Click="btnCapture_Click" Height="28" VerticalAlignment="Top" HorizontalAlignment="Left" Width="98" Foreground="#FF3399FF" BorderBrush="#FF3399FF" Background="White"/>
+        <Button x:Name="btnanew" Content="识别" Click="btnanew_Click" Height="28" VerticalAlignment="Top" HorizontalAlignment="Right" Width="98" Foreground="#FF3399FF" BorderBrush="#FF3399FF" Background="White"/>
+        <Border x:Name="b" BorderBrush="#FF3399FF" BorderThickness="1" Margin="0,27,0,0">
+            <WPFMediaKit:VideoCaptureElement  x:Name="vce"/>
+        </Border>
+    </Grid>
+</Window>
